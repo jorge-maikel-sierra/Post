@@ -44,9 +44,9 @@ class PostPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, Chirp $post): bool
+    public function delete(User $user, Post $post): bool
     {
-        //
+        return $this->update($user, $post);
     }
 
     /**
